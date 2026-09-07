@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewing Café</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="#home">Brewing</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#visit-us">Visit Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <h1>Brewing.Sipping.Relaxing</h1>
+            <p>Your neighborhood café for freshly brewed coffee, homemade treats, and good conversations.</p>
+            <a href="#menu">Explore Our Menu</a>
+            <img src="images/hero.jpg" alt="Brewing Café">
+        </section>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Brewing Cafe</h2>
+            <p>Brewing Café was created as a cozy space where people can slow down, enjoy great coffee, and connect with
+                others. We serve freshly brewed coffee, handcrafted drinks, pastries, and light meals prepared with
+                quality ingredients.</p>
+            <img src="images/about.jpg" alt="About Brewing Cafe">
+            <ul>
+                <li>Freshly Brewed</li>
+                <li>Locally Sourced</li>
+                <li>Made with Care</li>
+            </ul>
+        </section>
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Menu</h2>
+            <article>
+                <img src="images/latte.jpg" alt="Classic Latte">
+                <h3>Classic Latte</h3>
+                <p>Espresso blended with steamed milk.</p>
+                <p>₱140</p>
+            </article>
+            <article>
