@@ -75,21 +75,23 @@ section#home {
     background-repeat: no-repeat;
 }
 
+.hero-content {
+    max-width: 550px;
+}
+
 section#home h1 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 800;
     line-height: 1.2;
     color: #ffffff;
     margin-bottom: 18px;
-    max-width: 520px;
 }
 
 section#home p {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.6;
     color: #c5beba;
     margin-bottom: 30px;
-    max-width: 480px;
 }
 
 section#home a {
