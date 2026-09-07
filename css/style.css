@@ -3,3 +3,115 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background-color: #140d07;
+    color: #ffffff;
+
+}
+
+.hero-wrapper {
+    background-image: linear-gradient(rgba(20, 13, 7, 0.65), rgba(20, 13, 7, 0.65)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header {
+    background: transparent;
+    padding: 24px 60px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav>a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+nav ul li a {
+    color: #d1cfcd;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+
+
+main {
+    width: 100%;
+}
+
+section#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 40px;
+}
+
+section#home h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 18px;
+    max-width: 520px;
+}
+
+section#home p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #c5beba;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+section#home a {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #140d07;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+section#home a:hover {
+    background-color: #e5d5c5;
+    transform: translateY(-2px);
+}
+
+section#home img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6));
+}
