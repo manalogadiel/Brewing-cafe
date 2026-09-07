@@ -138,3 +138,19 @@ section#home img {
 .hero-content {
     max-width: 550px;
 }
+
+#about {
+    padding: 100px 60px;
+    background-color: #1a120b;
+}
+
+#about h2 {
+    font-family: 'Alfa Slab One', cursive, serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #f7e6d2;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+    text-align: center;
+    display: inline-block
+}
