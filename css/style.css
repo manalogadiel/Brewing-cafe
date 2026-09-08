@@ -141,7 +141,10 @@ section#home img {
 
 #about {
     padding: 80px 60px;
-    background-color: #1a120b;
+    background-image: linear-gradient(rgb(14, 10, 4), rgba(26, 18, 11, 0.625)), url('../images/About-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #about h2 {
@@ -173,6 +176,17 @@ section#home img {
     align-items: center;
 }
 
+.about-coffee::before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(197, 168, 128, 0.293) 15%, rgba(155, 106, 74, 0.17) 60%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
 .about-coffee img {
     max-width: 420px;
     width: 100%;
@@ -184,7 +198,6 @@ section#home img {
 
 .about-coffee ul.coffee-labels {
     font-family: 'Agbalumo';
-
     list-style: none;
     padding: 0;
     margin: 0;
@@ -203,19 +216,19 @@ section#home img {
 }
 
 .about-coffee .coffee-labels .label1 {
-    top: 18%;
+    top: 16%;
     left: -150px;
     text-align: right;
 }
 
 .about-coffee .coffee-labels .label2 {
-    top: 48%;
+    top: 44%;
     right: -150px;
     text-align: left;
 }
 
 .about-coffee .coffee-labels .label3 {
-    top: 78%;
+    top: 70%;
     left: -150px;
     text-align: right;
 }
