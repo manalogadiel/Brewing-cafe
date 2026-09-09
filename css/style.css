@@ -380,43 +380,43 @@ section#home img {
 }
 
 .podium-cheesecake {
-    left: 12.5%;
-    bottom: 24%;
+    left: 15%;
+    bottom: 15%;
     width: clamp(75px, 9.5vw, 150px);
     z-index: 6;
 }
 
 .podium-latte {
-    left: 23%;
-    bottom: 47%;
+    left: 26.5%;
+    bottom: 44%;
     width: clamp(60px, 7.8vw, 120px);
     z-index: 3;
 }
 
 .podium-matcha {
-    left: 47.5%;
-    bottom: 47%;
+    left: 49.5%;
+    bottom: 42.5%;
     width: clamp(55px, 7.2vw, 110px);
     z-index: 2;
 }
 
 .podium-croissant {
     left: 49%;
-    bottom: 32%;
+    bottom: 23%;
     width: clamp(80px, 11vw, 170px);
     z-index: 5;
 }
 
 .podium-macchiato {
-    left: 71.5%;
-    bottom: 47%;
+    left: 71%;
+    bottom: 43.5%;
     width: clamp(65px, 8vw, 125px);
     z-index: 3;
 }
 
 .podium-spanish {
-    left: 86.5%;
-    bottom: 27.5%;
+    left: 81.5%;
+    bottom: 20%;
     width: clamp(60px, 7.8vw, 120px);
     z-index: 6;
 }
@@ -939,38 +939,38 @@ footer>div:last-child {
     }
 
     .podium-cheesecake {
-        left: 12.5%;
-        bottom: 24%;
+        left: 15%;
+        bottom: 14%;
         width: clamp(42px, 8.5vw, 95px);
     }
 
     .podium-latte {
-        left: 23%;
-        bottom: 47%;
+        left: 26.5%;
+        bottom: 43%;
         width: clamp(34px, 7vw, 80px);
     }
 
     .podium-matcha {
-        left: 47.5%;
-        bottom: 47%;
+        left: 49.5%;
+        bottom: 39%;
         width: clamp(30px, 6.5vw, 75px);
     }
 
     .podium-croissant {
         left: 49%;
-        bottom: 32%;
+        bottom: 22%;
         width: clamp(48px, 9.8vw, 115px);
     }
 
     .podium-macchiato {
-        left: 71.5%;
-        bottom: 47%;
+        left: 71%;
+        bottom: 35%;
         width: clamp(36px, 7.2vw, 84px);
     }
 
     .podium-spanish {
-        left: 86.5%;
-        bottom: 27.5%;
+        left: 81.5%;
+        bottom: 19%;
         width: clamp(34px, 7vw, 80px);
     }
 
