@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -53,53 +54,142 @@
         <!-- Menu Section -->
         <section id="menu">
             <h2>Menu</h2>
-            <article>
-                <img src="images/latte.jpg" alt="Classic Latte">
-                <h3>Classic Latte</h3>
-                <p>Espresso blended with steamed milk.</p>
-                <p>₱140</p>
-            </article>
 
-            <article>
-                <img src="images/macchiato.jpg" alt="Caramel Macchiato">
-                <h3>Caramel Macchiato</h3>
-                <p>Espresso, steamed milk, and caramel.</p>
-                <p>₱155</p>
-            </article>
+            <div class="menu-stage">
+                <!-- 1. Blueberry Cheesecake -->
+                <div class="podium-item podium-cheesecake">
+                    <img src="images/blueberry-chs.png" alt="Blueberry Cheesecake">
+                    <div class="item-card">
+                        <div class="card-header">
+                            <h3>Blueberry Cheesecake</h3>
+                            <span class="price">₱175</span>
+                        </div>
+                        <p class="desc">Creamy cheesecake with blueberry topping.</p>
+                    </div>
+                </div>
 
-            <article>
-                <img src="images/spanish-latte.jpg" alt="Spanish Latte">
-                <h3>Spanish Latte</h3>
-                <p>Rich espresso with sweetened milk.</p>
-                <p>₱150</p>
-            </article>
 
-            <article>
-                <img src="images/matcha.jpg" alt="Matcha Cream Latte">
-                <h3>Matcha Cream Latte</h3>
-                <p>Smooth matcha with creamy milk.</p>
-                <p>₱160</p>
-            </article>
+                <div class="podium-item podium-latte">
+                    <img src="images/latte.png" alt="Classic Latte">
+                    <div class="item-card">
+                        <div class="card-header">
+                            <h3>Classic Latte</h3>
+                            <span class="price">₱140</span>
+                        </div>
+                        <p class="desc">Espresso blended with steamed milk.</p>
+                    </div>
+                </div>
 
-            <article>
-                <img src="images/croissant.jpg" alt="Chocolate Croissant">
-                <h3>Chocolate Croissant</h3>
-                <p>Buttery pastry filled with chocolate.</p>
-                <p>₱120</p>
-            </article>
 
-            <article>
-                <img src="images/cheesecake.jpg" alt="Blueberry Cheesecake">
-                <h3>Blueberry Cheesecake</h3>
-                <p>Creamy cheesecake with blueberry topping.</p>
-                <p>₱175</p>
-            </article>
+                <div class="podium-item podium-matcha">
+                    <img src="images/matcha-cl.png" alt="Matcha Cream Latte">
+                    <div class="item-card">
+                        <div class="card-header">
+                            <h3>Matcha Cream Latte</h3>
+                            <span class="price">₱160</span>
+                        </div>
+                        <p class="desc">Smooth matcha with creamy milk.</p>
+                    </div>
+                </div>
+
+
+                <div class="podium-item podium-croissant">
+                    <img src="images/choc-crs.png" alt="Chocolate Croissant">
+                    <div class="item-card">
+                        <div class="card-header">
+                            <h3>Chocolate Croissant</h3>
+                            <span class="price">₱120</span>
+                        </div>
+                        <p class="desc">Buttery pastry filled with chocolate.</p>
+                    </div>
+                </div>
+
+
+                <div class="podium-item podium-macchiato card-left">
+                    <img src="images/caramel-macc.png" alt="Caramel Macchiato">
+                    <div class="item-card">
+                        <div class="card-header">
+                            <h3>Caramel Macchiato</h3>
+                            <span class="price">₱155</span>
+                        </div>
+                        <p class="desc">Espresso, steamed milk, and caramel.</p>
+                    </div>
+                </div>
+
+
+                <div class="podium-item podium-spanish card-left">
+                    <img src="images/spanish-latte.png" alt="Spanish Latte">
+                    <div class="item-card">
+                        <div class="card-header">
+                            <h3>Spanish Latte</h3>
+                            <span class="price">₱150</span>
+                        </div>
+                        <p class="desc">Rich espresso with sweetened milk.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Cards Section -->
+        <section id="menu-cards">
+            <div class="menu-cards-grid">
+                <!-- 1. Classic Latte -->
+                <article class="menu-card">
+                    <img src="images/latte.png" alt="Classic Latte">
+                    <h3>Classic Latte</h3>
+                    <p class="menu-card-price">₱140</p>
+                    <p class="menu-card-desc">Espresso blended with steamed milk.</p>
+                </article>
+
+                <!-- 2. Caramel Macchiato -->
+                <article class="menu-card">
+                    <img src="images/caramel-macc.png" alt="Caramel Macchiato">
+                    <h3>Caramel Macchiato</h3>
+                    <p class="menu-card-price">₱155</p>
+                    <p class="menu-card-desc">Espresso, steamed milk, and caramel.</p>
+                </article>
+
+                <!-- 3. Spanish Latte -->
+                <article class="menu-card">
+                    <img src="images/spanish-latte.png" alt="Spanish Latte">
+                    <h3>Spanish Latte</h3>
+                    <p class="menu-card-price">₱150</p>
+                    <p class="menu-card-desc">Rich espresso with sweetened milk.</p>
+                </article>
+
+                <!-- 4. Matcha Cream Latte -->
+                <article class="menu-card">
+                    <img src="images/matcha-cl.png" alt="Matcha Cream Latte">
+                    <h3>Matcha Cream Latte</h3>
+                    <p class="menu-card-price">₱160</p>
+                    <p class="menu-card-desc">Smooth matcha with creamy milk.</p>
+                </article>
+
+                <!-- 5. Chocolate Croissant -->
+                <article class="menu-card">
+                    <img src="images/choc-crs.png" alt="Chocolate Croissant">
+                    <h3>Chocolate Croissant</h3>
+                    <p class="menu-card-price">₱120</p>
+                    <p class="menu-card-desc">Buttery pastry filled with chocolate.</p>
+                </article>
+
+                <!-- 6. Blueberry Cheesecake -->
+                <article class="menu-card">
+                    <img src="images/blueberry-chs.png" alt="Blueberry Cheesecake">
+                    <h3>Blueberry Cheesecake</h3>
+                    <p class="menu-card-price">₱175</p>
+                    <p class="menu-card-desc">Creamy cheesecake with blueberry topping.</p>
+                </article>
+            </div>
         </section>
 
         <!-- Special Offer Section -->
         <section id="special-offer">
             <h2>STUDY BREAK SPECIAL</h2>
             <p>Get any regular coffee + pastry for only ₱199.</p>
+            <div class="special-visual">
+                <img src="images/special-combo.png" alt="Study Break Special - Coffee and Croissant Combo">
+            </div>
             <button type="button">Grab the Offer</button>
         </section>
 
