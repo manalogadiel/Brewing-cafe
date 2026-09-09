@@ -232,3 +232,11 @@ section#home img {
     left: -150px;
     text-align: right;
 }
+
+#menu {
+    padding: 80px 60px;
+    background-image: linear-gradient(rgba(20, 13, 7, 0.111), rgba(20, 13, 7, 0.1)), url('../images/menu-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
