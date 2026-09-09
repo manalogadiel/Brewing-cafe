@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -12,7 +13,13 @@ body {
     font-family: 'Segoe UI', 'Arial', sans-serif;
     background-color: #140d07;
     color: #ffffff;
+    overflow-x: hidden;
+    width: 100%;
+}
 
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -89,8 +96,11 @@ section#home {
     background-repeat: no-repeat;
 }
 
+#hero-content,
 .hero-content {
     max-width: 550px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 section#home h1 {
@@ -99,6 +109,8 @@ section#home h1 {
     line-height: 1.2;
     color: #ffffff;
     margin-bottom: 18px;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 section#home p {
@@ -135,9 +147,6 @@ section#home img {
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6));
 }
 
-.hero-content {
-    max-width: 550px;
-}
 
 #about {
     padding: 80px 60px;
@@ -249,7 +258,7 @@ section#home img {
 
 #menu h2 {
     font-family: "Bebas Neue";
-    font-size: 150px;
+    font-size: clamp(60px, 8.5vw, 120px);
     font-weight: 700;
     color: #202c178c;
     letter-spacing: 1.5px;
@@ -371,50 +380,50 @@ section#home img {
 }
 
 .podium-cheesecake {
-    left: 16.5%;
-    bottom: 14%;
-    width: clamp(90px, 12vw, 170px);
+    left: 12.5%;
+    bottom: 24%;
+    width: clamp(75px, 9.5vw, 150px);
     z-index: 6;
 }
 
 .podium-latte {
-    left: 27%;
-    bottom: 43%;
-    width: clamp(70px, 9vw, 130px);
+    left: 23%;
+    bottom: 47%;
+    width: clamp(60px, 7.8vw, 120px);
     z-index: 3;
 }
 
 .podium-matcha {
-    left: 50%;
-    bottom: 41%;
-    width: clamp(65px, 8.5vw, 120px);
+    left: 47.5%;
+    bottom: 47%;
+    width: clamp(55px, 7.2vw, 110px);
     z-index: 2;
 }
 
 .podium-croissant {
     left: 49%;
-    bottom: 22%;
-    width: clamp(100px, 14vw, 200px);
+    bottom: 32%;
+    width: clamp(80px, 11vw, 170px);
     z-index: 5;
 }
 
 .podium-macchiato {
-    left: 70%;
-    bottom: 43%;
-    width: clamp(75px, 9.5vw, 135px);
+    left: 71.5%;
+    bottom: 47%;
+    width: clamp(65px, 8vw, 125px);
     z-index: 3;
 }
 
 .podium-spanish {
-    left: 81%;
-    bottom: 19%;
-    width: clamp(70px, 9vw, 130px);
+    left: 86.5%;
+    bottom: 27.5%;
+    width: clamp(60px, 7.8vw, 120px);
     z-index: 6;
 }
 
 #menu-cards {
     padding: 70px 40px 90px;
-    background: linear-gradient(180deg, #ffe9d3 0%, #3a2616 80%, #29190b91 100%);
+    background: radial-gradient(#ffe9d3 0%, #3a2616 80%, #29190b91 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -481,24 +490,6 @@ section#home img {
     color: #c5beba;
     line-height: 1.45;
     margin: 0;
-}
-
-@media (max-width: 960px) {
-    .menu-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
-}
-
-@media (max-width: 600px) {
-    #menu-cards {
-        padding: 40px 20px 60px;
-    }
-
-    .menu-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
 }
 
 
@@ -588,70 +579,136 @@ section#home img {
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65);
 }
 
-/* Visit Us Section */
 #visit-us {
-    padding: 80px 30px;
-    background-color: #1a120b;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    text-align: center;
+    padding: 100px 40px 60px;
+    background-image: linear-gradient(to bottom, rgba(20, 13, 7, 0.45) 0%, rgba(20, 13, 7, 0.55) 60%, rgba(20, 13, 7, 1) 100%), url('../images/visit-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 1px solid rgba(229, 184, 130, 0.12);
 }
 
 #visit-us h2 {
-    width: 100%;
-    font-size: 38px;
-    font-weight: 700;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 80px;
     color: #f7e6d2;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-#visit-us > div {
-    flex: 1 1 260px;
-    max-width: 320px;
-    background-color: #24180f;
-    border: 2px solid #3d281a;
-    border-radius: 8px;
-    padding: 28px 20px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+.visit-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+    gap: clamp(30px, 5vw, 60px);
 }
 
-#visit-us > div:hover {
-    transform: translateY(-4px);
-    border-color: #5c402d;
+.visit-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    text-align: left;
 }
 
-#visit-us h3 {
-    font-size: 20px;
+.visit-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
     color: #e5b882;
-    margin-bottom: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }
 
-#visit-us p {
-    font-size: 15px;
-    color: #c5beba;
+.visit-item p {
+    font-size: 1.05rem;
+    color: #d1cfcd;
     line-height: 1.6;
     margin: 4px 0;
 }
 
-/* Contact Section */
-#contact {
-    padding: 80px 30px;
-    background-color: #140d07;
-    text-align: center;
+.visit-item p strong {
+    color: #f7e6d2;
 }
 
-#contact h2 {
-    font-size: 38px;
-    font-weight: 700;
+.visit-map {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visit-map img {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    border-radius: 500px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+    object-fit: cover;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visit-map img:hover {
+    transform: scale(1.02);
+    border-color: #e5b882;
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.85);
+}
+
+
+
+#contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 40px 80px;
+    background-image: linear-gradient(to bottom, rgba(20, 13, 7, 1) 0%, rgba(20, 13, 7, 0.45) 25%, rgba(20, 13, 7, 0.45) 80%, rgba(13, 8, 4, 1) 100%), url('../images/contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    gap: clamp(40px, 5vw, 80px);
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-family: "Imperial Script", cursive;
+    font-size: clamp(70px, 6vw, 95px);
     color: #f7e6d2;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #d1cfcd;
+    line-height: 1.7;
+    max-width: 420px;
 }
 
 #contact form {
+    flex: 1.2;
+    width: 100%;
     max-width: 520px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -670,9 +727,9 @@ section#home img {
 #contact form textarea {
     width: 100%;
     padding: 12px 16px;
-    background-color: #20150d;
-    border: 1px solid #4a3425;
-    border-radius: 6px;
+    background-color: #83644ca7;
+    border: 1px solid #20150d;
+    border-radius: 20px;
     color: #ffffff;
     font-size: 15px;
     outline: none;
@@ -691,15 +748,16 @@ section#home img {
 }
 
 #contact form button {
+    align-self: center;
+    padding: 14px 48px;
     background-color: #e5b882;
     color: #140d07;
     font-size: 16px;
     font-weight: 700;
-    padding: 14px;
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     cursor: pointer;
-    margin-top: 6px;
+    margin-top: 10px;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -708,10 +766,9 @@ section#home img {
     transform: translateY(-2px);
 }
 
-/* Footer */
 footer {
     background-color: #0d0804;
-    border-top: 1px solid #2a1b10;
+
     padding: 60px 40px 30px;
     display: flex;
     flex-wrap: wrap;
@@ -719,7 +776,7 @@ footer {
     gap: 30px;
 }
 
-footer > div {
+footer>div {
     flex: 1 1 200px;
 }
 
@@ -757,10 +814,391 @@ footer ul li a:hover {
     color: #e5b882;
 }
 
-footer > div:last-child {
+footer>div:last-child {
     flex-basis: 100%;
     text-align: center;
-    border-top: 1px solid #1f140c;
     padding-top: 24px;
     margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 16px 28px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav>a {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    nav li a {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    section#home {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding: 130px 24px 60px;
+        gap: 32px;
+        min-height: auto;
+        box-sizing: border-box;
+    }
+
+    #hero-content,
+    .hero-content {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    section#home h1 {
+        font-size: clamp(34px, 5.5vw, 46px);
+        line-height: 1.25;
+    }
+
+    section#home p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    section#home img {
+        max-width: 360px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #about {
+        padding: 70px 24px;
+        overflow: hidden;
+    }
+
+    .about-coffee {
+        max-width: 620px;
+        width: 100%;
+        margin: 20px auto 0;
+        position: relative;
+    }
+
+    .about-coffee img {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .about-coffee::before {
+        width: 320px;
+        height: 320px;
+    }
+
+    .about-coffee .coffee-labels li {
+        font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+        white-space: nowrap;
+    }
+
+    .about-coffee .coffee-labels .label1 {
+        left: 0;
+        top: 18%;
+    }
+
+    .about-coffee .coffee-labels .label2 {
+        right: 0;
+        top: 44%;
+    }
+
+    .about-coffee .coffee-labels .label3 {
+        left: 0;
+        top: 70%;
+    }
+
+    #menu {
+        min-height: unset;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        padding: 20px 16px 0;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #menu h2 {
+        font-size: clamp(34px, 5.5vw, 55px);
+        margin-bottom: 0;
+    }
+
+    .podium-cheesecake {
+        left: 12.5%;
+        bottom: 24%;
+        width: clamp(42px, 8.5vw, 95px);
+    }
+
+    .podium-latte {
+        left: 23%;
+        bottom: 47%;
+        width: clamp(34px, 7vw, 80px);
+    }
+
+    .podium-matcha {
+        left: 47.5%;
+        bottom: 47%;
+        width: clamp(30px, 6.5vw, 75px);
+    }
+
+    .podium-croissant {
+        left: 49%;
+        bottom: 32%;
+        width: clamp(48px, 9.8vw, 115px);
+    }
+
+    .podium-macchiato {
+        left: 71.5%;
+        bottom: 47%;
+        width: clamp(36px, 7.2vw, 84px);
+    }
+
+    .podium-spanish {
+        left: 86.5%;
+        bottom: 27.5%;
+        width: clamp(34px, 7vw, 80px);
+    }
+
+    .menu-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        max-width: 720px;
+    }
+
+    #special-offer {
+        padding: 70px 30px;
+    }
+
+    .special-visual img {
+        max-width: 320px;
+    }
+
+    #visit-us {
+        padding: 80px 30px;
+    }
+
+    .visit-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 36px;
+    }
+
+    .visit-info {
+        text-align: center;
+    }
+
+    .visit-map img {
+        max-width: 320px;
+    }
+
+    #contact {
+        min-height: 100vh;
+        padding: 90px 30px 80px;
+        box-sizing: border-box;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info h2 {
+        text-align: center;
+        font-size: 75px;
+    }
+
+    .contact-info p {
+        margin: 0 auto;
+    }
+
+    #contact form {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #contact form button {
+        align-self: center;
+    }
+
+    footer {
+        padding: 50px 30px 25px;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 14px 18px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section#home {
+        padding: 130px 16px 50px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    #hero-content,
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    section#home h1 {
+        font-size: clamp(22px, 6.5vw, 32px);
+        line-height: 1.25;
+        margin-bottom: 14px;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    section#home p {
+        font-size: 15px;
+        line-height: 1.55;
+        padding: 0 4px;
+        margin-bottom: 24px;
+    }
+
+    section#home img {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .about-coffee {
+        max-width: 100%;
+    }
+
+    .about-coffee img {
+        max-width: 240px;
+    }
+
+    .about-coffee::before {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about-coffee ul.coffee-labels {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .about-coffee .coffee-labels li {
+        position: static;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    #menu {
+        min-height: unset;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        padding: 12px 6px 0;
+        background-size: 100% 100%;
+        background-position: center;
+        box-sizing: border-box;
+    }
+
+    #menu h2 {
+        font-size: clamp(20px, 5.5vw, 30px);
+        margin-bottom: 0;
+    }
+
+    .podium-cheesecake {
+        width: clamp(28px, 11vw, 52px);
+    }
+
+    .podium-latte {
+        width: clamp(22px, 8.5vw, 40px);
+    }
+
+    .podium-matcha {
+        width: clamp(20px, 8vw, 38px);
+    }
+
+    .podium-croissant {
+        width: clamp(32px, 13vw, 60px);
+    }
+
+    .podium-macchiato {
+        width: clamp(22px, 9vw, 42px);
+    }
+
+    .podium-spanish {
+        width: clamp(22px, 8.5vw, 40px);
+    }
+
+    .podium-item .item-card {
+        display: none;
+    }
+
+    #menu-cards {
+        padding: 40px 20px 60px;
+    }
+
+    .menu-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .special-visual img {
+        max-width: 250px;
+    }
+
+    .visit-map img {
+        max-width: 260px;
+    }
+
+    #contact {
+        min-height: 100vh;
+        padding: 90px 20px 60px;
+        box-sizing: border-box;
+    }
+
+    #contact form button {
+        width: 100%;
+    }
+
+    footer>div {
+        flex: 1 1 100%;
+        text-align: center;
+    }
 }

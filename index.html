@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Imperial+Script&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Imperial+Script&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -30,8 +33,8 @@
 
     <main>
         <section id="home">
-            <div id='hero-content'>
-                <h1>Brewing.Sipping.Relaxing</h1>
+            <div id="hero-content" class="hero-content">
+                <h1>Brewing. Sipping. Relaxing</h1>
                 <p>Your neighborhood café for freshly brewed coffee, homemade treats, and good conversations.</p>
                 <a href="#menu">Explore Our Menu</a>
             </div>
@@ -129,10 +132,8 @@
             </div>
         </section>
 
-        <!-- Menu Cards Section -->
         <section id="menu-cards">
             <div class="menu-cards-grid">
-                <!-- 1. Classic Latte -->
                 <article class="menu-card">
                     <img src="images/latte.png" alt="Classic Latte">
                     <h3>Classic Latte</h3>
@@ -140,7 +141,6 @@
                     <p class="menu-card-desc">Espresso blended with steamed milk.</p>
                 </article>
 
-                <!-- 2. Caramel Macchiato -->
                 <article class="menu-card">
                     <img src="images/caramel-macc.png" alt="Caramel Macchiato">
                     <h3>Caramel Macchiato</h3>
@@ -148,7 +148,6 @@
                     <p class="menu-card-desc">Espresso, steamed milk, and caramel.</p>
                 </article>
 
-                <!-- 3. Spanish Latte -->
                 <article class="menu-card">
                     <img src="images/spanish-latte.png" alt="Spanish Latte">
                     <h3>Spanish Latte</h3>
@@ -156,7 +155,6 @@
                     <p class="menu-card-desc">Rich espresso with sweetened milk.</p>
                 </article>
 
-                <!-- 4. Matcha Cream Latte -->
                 <article class="menu-card">
                     <img src="images/matcha-cl.png" alt="Matcha Cream Latte">
                     <h3>Matcha Cream Latte</h3>
@@ -164,7 +162,6 @@
                     <p class="menu-card-desc">Smooth matcha with creamy milk.</p>
                 </article>
 
-                <!-- 5. Chocolate Croissant -->
                 <article class="menu-card">
                     <img src="images/choc-crs.png" alt="Chocolate Croissant">
                     <h3>Chocolate Croissant</h3>
@@ -172,7 +169,6 @@
                     <p class="menu-card-desc">Buttery pastry filled with chocolate.</p>
                 </article>
 
-                <!-- 6. Blueberry Cheesecake -->
                 <article class="menu-card">
                     <img src="images/blueberry-chs.png" alt="Blueberry Cheesecake">
                     <h3>Blueberry Cheesecake</h3>
@@ -193,44 +189,55 @@
 
         <section id="visit-us">
             <h2>Visit Brewing Cafe</h2>
-            <div>
-                <h3>Address</h3>
-                <p>123 University Avenue, Batangas City</p>
-            </div>
-            <div>
-                <h3>Opening Hours</h3>
-                <p>Monday – Saturday</p>
-                <p>7:00 AM – 9:00 PM</p>
-                <p>Sunday</p>
-                <p>8:00 AM – 6:00 PM</p>
-            </div>
-            <div>
-                <h3>Contact Information</h3>
-                <p>Phone: (043) 123-4567</p>
-                <p>Email: brewingcafe@brewed.caf</p>
+            <div class="visit-container">
+                <div class="visit-info">
+                    <div class="visit-item">
+                        <h3>Address</h3>
+                        <p>123 University Avenue, Batangas City</p>
+                    </div>
+                    <div class="visit-item">
+                        <h3>Opening Hours</h3>
+                        <p>Monday – Saturday: <strong>7:00 AM – 9:00 PM</strong></p>
+                        <p>Sunday: <strong>8:00 AM – 6:00 PM</strong></p>
+                    </div>
+                    <div class="visit-item">
+                        <h3>Contact Information</h3>
+                        <p>Phone: (043) 123-4567</p>
+                        <p>Email: brewingcafe@brewed.caf</p>
+                    </div>
+                </div>
+                <div class="visit-map">
+                    <img src="images/location-map.png" alt="Brewing Cafe Location Map">
+                </div>
             </div>
         </section>
         <section id="contact">
-            <h2>Contact</h2>
-            <form action="#" method="post">
-                <div>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact</h2>
+                    <p>Have questions, feedback, or special requests? Drop us a line and we'll get back to you shortly.
+                    </p>
                 </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
+                <form action="#" method="post">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
